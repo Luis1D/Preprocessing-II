@@ -1,5 +1,16 @@
-.home {
+@moble: ~"(max-width: 500px)";
 
+.home {
+  color: @font-color;
+  .page-width();
+
+  .intro-section {
+    border-bottom: 2px dashed @navigation-border;
+
+    h2 {
+      margin-top: 1rem;
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -11,21 +22,44 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @moble {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @moble {
+        width: 100%;
+        margin-top: 1rem;
+      }
+      
       img {
         border-radius: 10px;
+        
+      @media @moble {
+        width: 100%;
       }
+      }
+    }
+
+    @media @moble {
+      display: flex;
+      flex-direction: column;
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    
+    @media @moble {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -35,7 +69,6 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
-    }
   }
 
   .content-destination {
@@ -46,16 +79,38 @@
       border-radius: 10px;
     }
   }
-
-  .content-pick {
+}
+.content-destination {
+  @media @moble {
+        padding-bottom: 2.5rem;
+    }
+}
+.content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
+    @media @moble {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @moble {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+      }
+
+        button {
+          .btn-style(1rem, 100%, 4rem);
+          background-color: @button-bg;
+          color: @main-bg;
+          font-size: 1.9rem;
+        }
     }
   }
 }// home
