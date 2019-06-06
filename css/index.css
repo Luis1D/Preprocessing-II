@@ -7,6 +7,11 @@
 .page-width {
   padding: 0 5.5rem 0 5.5rem;
 }
+@media (max-width: 500px) {
+  .page-width {
+    padding: 0 2.5rem 0 2.5rem;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -187,6 +192,11 @@ img {
   justify-content: space-between;
   padding: 0 5.5rem 0 5.5rem;
 }
+@media (max-width: 500px) {
+  .header {
+    padding: 0 2.5rem 0 2.5rem;
+  }
+}
 .header .nav {
   width: 40rem;
   text-align: right;
@@ -197,6 +207,19 @@ img {
   margin-right: 1.1rem;
   text-decoration: none;
   color: #212529;
+}
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    padding-top: 1rem;
+  }
+  .header .nav {
+    text-align: center;
+    padding: 0 0 0.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .footer {
   width: 100%;
@@ -212,6 +235,11 @@ img {
 .home {
   color: #212529;
   padding: 0 5.5rem 0 5.5rem;
+}
+@media (max-width: 500px) {
+  .home {
+    padding: 0 2.5rem 0 2.5rem;
+  }
 }
 .home .intro-section {
   border-bottom: 2px dashed #C0C0C0;
@@ -229,16 +257,44 @@ img {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -248,28 +304,27 @@ img {
   padding-right: 1%;
   padding-left: 0;
 }
-.home .content-destination {
+.home .inverse-content .content-destination {
   width: 75%;
   margin: 0 auto 30px;
 }
-.home .content-destination img {
+.home .inverse-content .content-destination img {
   border-radius: 10px;
 }
-.home .content-pick {
+.home .inverse-content .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
-.home .content-pick .destination {
+.home .inverse-content .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
-.home .content-pick .destination button {
+.home .inverse-content .content-pick .destination button {
   width: 100%;
   height: 3.5rem;
-  border: none;
+  border-radius: 1rem;
   background-color: #17A2B8;
   color: #FFFFFF;
-  border-radius: 1rem;
 }

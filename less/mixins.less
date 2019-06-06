@@ -7,4 +7,14 @@
 }
 .page-width {
     padding: 0 5.5rem 0 5.5rem;
+
+    @media @moble {
+        padding: 0 2.5rem 0 2.5rem;
+    }
+}
+
+.btn-style(@radius,@width,@height) {
+    width: @width;
+    height: @height;
+    border-radius: @radius;
 }
