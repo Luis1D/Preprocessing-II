@@ -311,20 +311,40 @@ img {
 .home .inverse-content .content-destination img {
   border-radius: 10px;
 }
-.home .inverse-content .content-pick {
+@media (max-width: 500px) {
+  .home .content-destination {
+    padding-bottom: 2.5rem;
+  }
+}
+.home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
-.home .inverse-content .content-pick .destination {
+@media (max-width: 500px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+}
+.home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
-.home .inverse-content .content-pick .destination button {
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+  }
+}
+.home .content-pick .destination button {
   width: 100%;
-  height: 3.5rem;
+  height: 4rem;
   border-radius: 1rem;
   background-color: #17A2B8;
   color: #FFFFFF;
+  font-size: 1.9rem;
 }
